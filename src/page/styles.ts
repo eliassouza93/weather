@@ -10,6 +10,9 @@ export const Container = styled.div`
 export const Title = styled.h1`
   text-align: center;
   margin-bottom: 10px;
+  @media (max-width: 600px) {
+    font-size: 16px;
+  }
 `;
 
 export const Subtitle = styled.h2`
