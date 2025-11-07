@@ -71,3 +71,5 @@ export default defineConfig([
   },
 ])
 ```
+
+<!-- https://open-meteo.com/en/docs -->
