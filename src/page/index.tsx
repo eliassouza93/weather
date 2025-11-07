@@ -29,7 +29,6 @@ export function HomePage() {
   const [dias, setDias] = useState([]);
   const [melhorDia, setMelhorDia] = useState<DiaType | null>(null);
   const [piorDia, setPiorDia] = useState<DiaType | null>(null);
-  const [medio, setMedio] = useState<DiaType | null>(null);
 
   useEffect(() => {
     axios
