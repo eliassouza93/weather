@@ -17,6 +17,7 @@ import {
 } from "./styles";
 import type { DiaType } from "../types";
 import { httpUrl } from "../utils/httpUrl";
+import ListaTitulosDias from "../components/ListaTituloDias";
 
 const iconesClima = {
   sol: "☀️",
@@ -110,15 +111,7 @@ export function HomePage() {
 
       <Table>
         <THead>
-          <tr>
-            <TH>Dia</TH>
-            <TH>Clima</TH>
-            <TH>Temp Máx (°C)</TH>
-            <TH>Temp Min (°C)</TH>
-            <TH>Chuva (mm)</TH>
-            <TH>Vento (km/h)</TH>
-            <TH>Pontuação</TH>
-          </tr>
+          <ListaTitulosDias />
         </THead>
         <TBody>
           {dias.map((d, i) => (
