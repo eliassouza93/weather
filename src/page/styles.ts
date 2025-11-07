@@ -67,7 +67,7 @@ export const TH = styled.th`
   font-size: 14px;
 
   @media (max-width: 600px) {
-    font-size: 12px;
+    font-size: 5px;
     padding: 5px;
   }
 `;
@@ -109,6 +109,7 @@ export const TD = styled.td`
   @media (max-width: 600px) {
     font-size: 12px;
     padding: 5px;
+    font-size: 9px;
 
     .responsiveClass {
       display: none;
