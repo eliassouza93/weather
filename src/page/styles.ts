@@ -1,17 +1,35 @@
 import styled, { keyframes } from "styled-components";
 
 export const Container = styled.div`
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    background-color: #fff;
+  }
   font-family: sans-serif;
   max-width: 900px;
   margin: 0 auto;
   padding: 20px;
+  @media (max-width: 600px) {
+    width: 300px;
+    text-align: start;
+  }
 `;
 
 export const Title = styled.h1`
   text-align: center;
   margin-bottom: 10px;
   @media (max-width: 600px) {
-    font-size: 16px;
+    font-size: 12px;
+    text-align: start;
   }
 `;
 
@@ -24,12 +42,17 @@ export const BestDayText = styled.p`
   text-align: center;
   font-size: 18px;
   margin-bottom: 20px;
+
+  @media (max-width: 600px) {
+    text-align: start;
+  }
 `;
 
 export const Table = styled.table`
   width: 100%;
   border-collapse: collapse;
   overflow-x: auto;
+  display: block;
 `;
 
 export const THead = styled.thead`
@@ -67,7 +90,7 @@ export const TH = styled.th`
   font-size: 14px;
 
   @media (max-width: 600px) {
-    font-size: 5px;
+    font-size: 6px;
     padding: 5px;
   }
 `;
@@ -109,7 +132,7 @@ export const TD = styled.td`
   @media (max-width: 600px) {
     font-size: 12px;
     padding: 5px;
-    font-size: 9px;
+    font-size: 10px;
 
     .responsiveClass {
       display: none;
@@ -130,6 +153,7 @@ export const ContainerAviso = styled.div`
   }
 
   .pior {
+    margin-top: 4px;
     background-color: #f8d7da;
     color: #721c24;
     width: 220px;
