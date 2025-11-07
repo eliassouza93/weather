@@ -1,0 +1,21 @@
+import { TD, TDAY, TR } from "../../page/styles";
+import type { DiasProps } from "../../types";
+
+export function DiasDaSemana({ props, isBest }: DiasProps) {
+  return (
+    <TR isBest={isBest}>
+      <TD>
+        <TDAY>
+          {props.nomeDoDia} <span className="responsiveClass">-</span>{" "}
+          <span className="responsiveClass">{props.dia}</span>
+        </TDAY>
+      </TD>
+      <TD>{props.clima}</TD>
+      <TD>{props.tempMax}</TD>
+      <TD>{props.tempMin}</TD>
+      <TD>{props.chuva}</TD>
+      <TD>{props.vento}</TD>
+      <TD>{props.score}</TD>
+    </TR>
+  );
+}
