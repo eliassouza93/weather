@@ -10,7 +10,6 @@ import {
   Table,
   THead,
   TBody,
-  TH,
   LoadingWrapper,
   Spinner,
   LoadingText,
