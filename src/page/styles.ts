@@ -99,7 +99,7 @@ export const TD = styled.td`
   padding: 10px;
   text-align: left;
   font-size: 14px;
-
+  text-align: center;
   @media (max-width: 600px) {
     font-size: 12px;
     padding: 5px;
