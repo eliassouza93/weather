@@ -12,10 +12,10 @@ export function DiasDaSemana({ props, isBest, piorDia }: DiasProps) {
         </TDAY>
       </TD>
       <TD>{props.clima}</TD>
-      <TD>{props.tempMax}</TD>
-      <TD>{props.tempMin}</TD>
-      <TD>{props.chuva}</TD>
-      <TD>{props.vento}</TD>
+      <TD>{props.tempMax.toFixed(0)}</TD>
+      <TD>{props.tempMin.toFixed(0)}</TD>
+      <TD>{props.chuva.toFixed(0)}</TD>
+      <TD>{props.vento.toFixed(0)}</TD>
       <TD>{props.score}</TD>
     </TR>
   );
