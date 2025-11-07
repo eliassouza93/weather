@@ -149,7 +149,7 @@ export const ContainerAviso = styled.div`
     background-color: #d4edda;
     color: #155724;
     width: 220px;
-    text-align: center;
+    
   }
 
   .pior {
@@ -157,6 +157,6 @@ export const ContainerAviso = styled.div`
     background-color: #f8d7da;
     color: #721c24;
     width: 220px;
-    text-align: center;
+    
   }
 `;
