@@ -12,7 +12,7 @@ export type DiasType = {
 export interface DiasProps {
   props: DiasType;
   isBest?: boolean;
-  piorDia?:boolean
+  piorDia?: boolean;
 }
 
 export type DiaType = {

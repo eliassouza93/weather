@@ -29,6 +29,7 @@ export function HomePage() {
   const [dias, setDias] = useState([]);
   const [melhorDia, setMelhorDia] = useState<DiaType | null>(null);
   const [piorDia, setPiorDia] = useState<DiaType | null>(null);
+  const [medio, setMedio] = useState<DiaType | null>(null);
 
   useEffect(() => {
     axios
@@ -110,7 +111,7 @@ export function HomePage() {
       )}
 
       <ContainerAviso>
-        <p className="melhor">🌤️ Melhor dia: {melhorDia?.dia}</p>
+        <p className="melhor">🌤️ Melhor dia: {melhorDia?.dia} </p>
         <p className="pior">🌧️ Pior dia: {piorDia?.dia}</p>
       </ContainerAviso>
 

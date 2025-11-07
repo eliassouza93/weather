@@ -36,7 +36,11 @@ export const THead = styled.thead`
 
 export const TBody = styled.tbody``;
 
-export const TR = styled.tr<{ isBest?: boolean; piorDia?: boolean }>`
+export const TR = styled.tr<{
+  isBest?: boolean;
+  medioDia?: boolean;
+  piorDia?: boolean;
+}>`
   background-color: ${(props) =>
     props.isBest ? "#88e29dff" : props.piorDia ? "#f8d7da" : "white"};
 
@@ -46,7 +50,6 @@ export const TR = styled.tr<{ isBest?: boolean; piorDia?: boolean }>`
   }
 
   @media (max-width: 600px) {
-    display: block;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 8px;
