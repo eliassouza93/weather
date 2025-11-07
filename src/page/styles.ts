@@ -36,10 +36,21 @@ export const THead = styled.thead`
 
 export const TBody = styled.tbody``;
 
-export const TR = styled.tr<{ isBest?: boolean }>`
-  background-color: ${(props) => (props.isBest ? "#d4edda" : "white")};
+export const TR = styled.tr<{ isBest?: boolean; piorDia?: boolean }>`
+  background-color: ${(props) =>
+    props.isBest ? "#88e29dff" : props.piorDia ? "#f8d7da" : "white"};
+
   &:nth-child(even) {
-    background-color: ${(props) => (props.isBest ? "#d4edda" : "#f2f2f2")};
+    background-color: ${(props) =>
+      props.isBest ? "#d4edda" : props.piorDia ? "#f8d7da" : "#f2f2f2"};
+  }
+
+  @media (max-width: 600px) {
+    display: block;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
   }
 `;
 
@@ -101,5 +112,20 @@ export const TD = styled.td`
 export const TDAY = styled.div`
   display: flex;
   justify-content: space-between;
+`;
 
+export const ContainerAviso = styled.div`
+  .melhor {
+    background-color: #d4edda;
+    color: #155724;
+    width: 220px;
+    text-align: center;
+  }
+
+  .pior {
+    background-color: #f8d7da;
+    color: #721c24;
+    width: 220px;
+    text-align: center;
+  }
 `;

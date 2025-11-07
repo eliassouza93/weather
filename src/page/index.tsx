@@ -14,6 +14,7 @@ import {
   LoadingWrapper,
   Spinner,
   LoadingText,
+  ContainerAviso,
 } from "./styles";
 import type { DiaType } from "../types";
 import { httpUrl } from "../utils/httpUrl";
@@ -28,6 +29,7 @@ const iconesClima = {
 export function HomePage() {
   const [dias, setDias] = useState([]);
   const [melhorDia, setMelhorDia] = useState<DiaType | null>(null);
+  const [piorDia, setPiorDia] = useState<DiaType | null>(null);
 
   useEffect(() => {
     axios
@@ -38,7 +40,6 @@ export function HomePage() {
           const chuva = dados.precipitation_sum[i];
           const vento = dados.windspeed_10m_max[i];
           const tempMax = dados.temperature_2m_max[i];
-
           let score = 0;
           if (chuva === 0) score += 3;
           if (tempMax >= 20 && tempMax <= 30) score += 2;
@@ -61,9 +62,11 @@ export function HomePage() {
         });
 
         const melhor = [...diasSemana].sort((a, b) => b.score - a.score)[0];
+        const pior = [...diasSemana].sort((a, b) => b.score + a.score)[0];
 
         setDias(diasSemana);
         setMelhorDia(melhor);
+        setPiorDia(pior);
       })
       .catch(console.error);
   }, []);
@@ -107,6 +110,11 @@ export function HomePage() {
         </BestDayText>
       )}
 
+      <ContainerAviso>
+        <p className="melhor">🌤️ Melhor dia: {melhorDia?.dia}</p>
+        <p className="pior">🌧️ Pior dia: {piorDia?.dia}</p>
+      </ContainerAviso>
+
       <Subtitle>Previsão semanal</Subtitle>
 
       <Table>
@@ -115,7 +123,12 @@ export function HomePage() {
         </THead>
         <TBody>
           {dias.map((d, i) => (
-            <DiasDaSemana key={i} props={d} isBest={d === melhorDia} />
+            <DiasDaSemana
+              key={i}
+              props={d}
+              isBest={d === melhorDia}
+              piorDia={d === piorDia}
+            />
           ))}
         </TBody>
       </Table>
