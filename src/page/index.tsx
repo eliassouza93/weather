@@ -64,7 +64,8 @@ export function HomePage() {
 
         const diasOrdenados = [...diasSemana].sort((a, b) => b.score - a.score);
 
-        const pior = diasOrdenados
+        const pior =
+          diasOrdenados
             .slice()
             .reverse()
             .find((dia) => dia !== melhor) || null;
@@ -106,7 +107,7 @@ export function HomePage() {
 
   return (
     <Container>
-      <Title>Melhor dia para lavar roupa em Florianópolis</Title>
+      <Title>Previsão do tempo Florianópolis </Title>
 
       {melhorDia && (
         <BestDayText>

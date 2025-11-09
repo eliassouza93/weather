@@ -19,7 +19,7 @@ export const Container = styled.div`
   margin: 0 auto;
   padding: 20px;
   @media (max-width: 600px) {
-    width: 300px;
+    width: 325px;
     text-align: start;
   }
 `;
@@ -28,7 +28,7 @@ export const Title = styled.h1`
   text-align: center;
   margin-bottom: 10px;
   @media (max-width: 600px) {
-    font-size: 12px;
+    font-size: 18px;
     text-align: start;
   }
 `;
