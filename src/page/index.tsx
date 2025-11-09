@@ -61,7 +61,13 @@ export function HomePage() {
         });
 
         const melhor = [...diasSemana].sort((a, b) => b.score - a.score)[0];
-        const pior = [...diasSemana].sort((a, b) => b.score + a.score)[0];
+
+        const diasOrdenados = [...diasSemana].sort((a, b) => b.score - a.score);
+
+        const pior = diasOrdenados
+            .slice()
+            .reverse()
+            .find((dia) => dia !== melhor) || null;
 
         setDias(diasSemana);
         setMelhorDia(melhor);
@@ -111,6 +117,7 @@ export function HomePage() {
 
       <ContainerAviso>
         <p className="melhor">🌤️ Melhor dia: {melhorDia?.dia} </p>
+
         <p className="pior">🌧️ Pior dia: {piorDia?.dia}</p>
       </ContainerAviso>
 
