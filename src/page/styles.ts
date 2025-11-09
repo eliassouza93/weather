@@ -19,7 +19,7 @@ export const Container = styled.div`
   margin: 0 auto;
   padding: 20px;
   @media (max-width: 600px) {
-    width: 320px;
+    width: 310px;
     text-align: start;
   }
 `;
