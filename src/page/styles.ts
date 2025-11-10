@@ -142,6 +142,11 @@ export const TD = styled.td`
 export const TDAY = styled.div`
   display: flex;
   justify-content: space-between;
+  width: 210px;
+
+  @media (max-width: 600px) {
+    width: 63px;
+  }
 `;
 
 export const ContainerAviso = styled.div`
