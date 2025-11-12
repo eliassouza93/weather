@@ -28,7 +28,7 @@ const iconesClima = {
 export function HomePage() {
   const [dias, setDias] = useState([]);
   const [melhorDia, setMelhorDia] = useState<DiaType | null>(null);
-  const [piorDia, setPiorDia] = useState<DiaType | null>(null);
+  const [isNotDay, setIsNotDay] = useState<DiaType | null>(null);
 
   useEffect(() => {
     axios
@@ -72,7 +72,7 @@ export function HomePage() {
 
         setDias(diasSemana);
         setMelhorDia(melhor);
-        setPiorDia(pior);
+        setIsNotDay(pior);
       })
       .catch(console.error);
   }, []);
@@ -119,7 +119,7 @@ export function HomePage() {
       <ContainerAviso>
         <p className="melhor">🌤️ Melhor dia: {melhorDia?.dia} </p>
 
-        <p className="pior">🌧️ Pior dia: {piorDia?.dia}</p>
+        <p className="pior">🌧️ Pior dia: {isNotDay?.dia}</p>
       </ContainerAviso>
 
       <Subtitle>Previsão semanal</Subtitle>
@@ -134,7 +134,7 @@ export function HomePage() {
               key={i}
               props={d}
               isBest={d === melhorDia}
-              piorDia={d === piorDia}
+              isNotDay={d === isNotDay}
             />
           ))}
         </TBody>

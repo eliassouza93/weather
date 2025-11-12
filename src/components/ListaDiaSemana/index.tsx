@@ -1,9 +1,9 @@
 import { TD, TDAY, TR } from "../../page/styles";
 import type { DiasProps } from "../../types";
 
-export function DiasDaSemana({ props, isBest, piorDia }: DiasProps) {
+export function DiasDaSemana({ props, isBest, isNotDay }: DiasProps) {
   return (
-    <TR isBest={isBest} piorDia={piorDia}>
+    <TR isBest={isBest} piorDia={isNotDay}>
       <TD>
         <TDAY>
           {props.nomeDoDia}
