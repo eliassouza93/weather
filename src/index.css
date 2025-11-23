@@ -2,3 +2,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities; */
+body {
+    /* background-color: #c0aeae; */
+    background-image: url('https://media.istockphoto.com/id/2196545732/pt/foto/cosmos-blooming-in-a-park.webp?a=1&b=1&s=612x612&w=0&k=20&c=Wv9ZoK7Fxgb30s1BSplBhWirgNgjfGaOsDqicm1B-zA=');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+}
